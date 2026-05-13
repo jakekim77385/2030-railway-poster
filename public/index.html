@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 한국철도학회 포스터 - 철도 EPC 메가프로젝트</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="poster-canvas">
+    <header class="poster-header">
+      <div class="header-content">
+        <div class="title-area">
+          <h1>철도 EPC 메가프로젝트의 시스템 인터페이스 관리 체계:<br><span class="highlight">ICD·IRM 거버넌스와 성과 분석을 중심으로</span></h1>
+          <h2 class="authors">김도한*, 배준현†</h2>
+          <h3 class="affiliations">* 현대엔지니어링 &nbsp; | &nbsp; † 한국철도기술연구원 철도시험인증본부</h3>
+        </div>
+      </div>
+    </header>
+
+    <main class="poster-body">
+
+      <!-- 1. 서론 (Introduction) -->
+      <section class="poster-row">
+        <div class="row-header">
+          <h2>Introduction</h2>
+        </div>
+        <div class="row-content box-content">
+          <div class="row-direction intro-layout">
+
+            <div class="intro-block">
+              <p class="intro-title">1. 연구 배경 (Background)</p>
+              <ul class="styled-list small-list">
+                <li>해외 철도 시장, EPC Turnkey 발주 급증 추세</li>
+                <li>발주 구조: 단일 책임(Single Responsibility) 구조 → 통합 역량 요구 증가</li>
+                <li>국내기업의 철도 시스템 통합(SI) 역량 강화 필요</li>
+              </ul>
+            </div>
+
+            <div class="intro-block">
+              <p class="intro-title problem">2. 문제 제기 (Problem Statement)</p>
+              <ul class="styled-list small-list">
+                <li><span class="highlight-red">풀패키지 환경</span>
+                  <ul class="styled-list small-list" style="margin-top:4px;">
+                    <li><span class="arrow-indent">→</span> 다공종 인터페이스 복잡도 기하급수적 증가</li>
+                  </ul>
+                </li>
+                <li><span class="highlight-red">공종별 경계 미관리 시</span>
+                  <ul class="styled-list small-list" style="margin-top:4px;">
+                    <li><span class="arrow-indent">→</span> <span class="highlight-red">설계/시공 충돌 및 공기 지연 위험 심화</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="intro-block">
+              <p class="intro-title objective">3. 연구 목적 (Objective)</p>
+              <ul class="styled-list small-list">
+                <li>전문화된 인터페이스 관리 체계의 필요성 대두</li>
+                <li>수행 사례 성과 분석 → Lessons Learned 도출</li>
+                <li>ICD-IRM 인터페이스 관리 거버넌스 모델 정립</li>
+                <li>철도산업 해외 EPC 진출 → 실무 방향성 제시</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 본론 (Subjects) -->
+      <section class="poster-row subjects-row">
+        <div class="row-header">
+          <h2>Subjects</h2>
+        </div>
+        <div class="row-content box-content">
+
+          <!-- ▶ 비교표 -->
+          <h3 class="col-title">▶ 현황 분석 : 국내 철도산업 특성 vs 해외 EPC 수행 적합성 비교</h3>
+          <div class="compare-table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th class="ct-category">구분</th>
+                  <th class="ct-domestic">국내 철도산업 특성<br><span class="th-sub">(수십 년간 형성된 구조)</span></th>
+                  <th class="ct-overseas">해외 풀패키지 EPC 환경 요구</th>
+                  <th class="ct-fit">적용 상태</th>
+                  <th class="ct-risk">주요 리스크</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ct-category-cell">1. 발주 방식</td>
+                  <td>공종별 <strong>분리발주</strong> 위주 <span class="td-sub-inline">토목·궤도·전기·신호·통신·차량 분리 발주</span></td>
+                  <td>단일 EPC 계약자가 <strong>전 공종 통합 책임</strong></td>
+                  <td class="fit-bad">체계 구축 필요</td>
+                  <td>공종 간 책임 경계 불명확 → 클레임·분쟁 빈발</td>
+                </tr>
+                <tr class="tr-alt">
+                  <td class="ct-category-cell">2. 인터페이스 관리</td>
+                  <td>기준서 내, <strong>내재적 반영</strong> <span class="td-sub-inline">공종별 기준 준수 및 별도 인터페이스</span></td>
+                  <td>ICD 작성·승인·추적의 <strong>명시적 관리 의무화</strong></td>
+                  <td class="fit-bad">체계 구축 필요</td>
+                  <td>IF 누락·충돌 미감지 → 시공 단계 재작업 급증</td>
+                </tr>
+                <tr>
+                  <td class="ct-category-cell">3. 설계 기준 체계</td>
+                  <td><strong>국내</strong> 철도법령·기술기준 <span class="td-sub-inline">철도건설규칙, 철도차량 안전기준 등</span></td>
+                  <td>UIC · EN · IEC 계열 <strong>국제 표준 적용</strong></td>
+                  <td class="fit-warn">보완 필요</td>
+                  <td>설계 기준 미흡 → 일반 방식으로 사업수행 적용</td>
+                </tr>
+                <tr class="tr-alt">
+                  <td class="ct-category-cell">4. 인력 구조</td>
+                  <td>공종 전문가 <strong>중심수행 구조</strong> <span class="td-sub-inline">심화 전문성, 타 공종 이해도 필요</span></td>
+                  <td>공종 조율 가능한 <strong>SI(System Integrator) 역량</strong> 인력</td>
+                  <td class="fit-bad">체계 구축 필요</td>
+                  <td>다공종 통합 조율 인력 부재 → Interface Manager 공백</td>
+                </tr>
+                <tr>
+                  <td class="ct-category-cell">5. 프로젝트 관리도구</td>
+                  <td>범용 및 사내 시스템 기반 <strong>문서관리</strong> <span class="td-sub-inline">IRM 전용 시스템 미도입</span></td>
+                  <td>PMIS·EDMS·IRM 시스템 연계 <strong>디지털 통합관리</strong></td>
+                  <td class="fit-warn">보완 필요</td>
+                  <td>변경 이력 제한적 → 업무효율 저하, 클레임 대응 취약</td>
+                </tr>
+                <tr class="tr-alt">
+                  <td class="ct-category-cell">6. 계약 구조 경험</td>
+                  <td>국내 발주 + 해외 <strong>Build only</strong> 위주 <span class="td-sub-inline">FIDIC 계약 경험 제한적</span></td>
+                  <td>FIDIC Silver Book 기반 <strong>EPC 턴키 계약</strong> 구조</td>
+                  <td class="fit-bad">체계 구축 필요</td>
+                  <td>계약 리스크 관리 경험 부족 → 클레임 대응 취약</td>
+                </tr>
+                <tr>
+                  <td class="ct-category-cell">7. 시운전·통합시험</td>
+                  <td>공종별 <strong>개별 시험 후 인계</strong> <span class="td-sub-inline">전체 시스템 통합시험 경험 부족</span></td>
+                  <td>전 공종 동시 참여 <strong>통합 Interface 검증 시험</strong></td>
+                  <td class="fit-warn">보완 필요</td>
+                  <td>통합시험 단계 문제 접합 → 준공 일정 지연 리스크</td>
+                </tr>
+                <tr class="tr-alt">
+                  <td class="ct-category-cell">8. RAMS 관리</td>
+                  <td>철도안전법 기반 <strong>사후 위험분석 위주</strong> <span class="td-sub-inline">EN 50126, RAMS 생소</span></td>
+                  <td>EN 50126 기반 <strong>전주기 RAMS</strong> 수립·이행 의무화</td>
+                  <td class="fit-bad">체계 구축 필요</td>
+                  <td>RAMS 요구사항 미충족 → 운영 인증 미승인, 준공지연</td>
+                </tr>
+                <tr>
+                  <td class="ct-category-cell">9. 국제 경험 축적</td>
+                  <td>해외 EPC <strong>수행 사례 제한적</strong> <span class="td-sub-inline">단순 기자재 공급·토목 시공 위주</span></td>
+                  <td>다국적 이해관계자 조율·<strong>전주기 SI 수행 역량</strong> 요구</td>
+                  <td class="fit-bad">체계 구축 필요</td>
+                  <td>경험 부재 → 초기 수행 시 시행착오 과다, 수익성 저하</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ▶ 인터페이스 구조 분석 -->
+          <div class="inner-columns" style="margin-top:14px;">
+            <div class="inner-col">
+              <h3 class="col-title">▶ 인터페이스 구조 분석</h3>
+              <p class="desc-text" style="margin-top: 8px;"><strong>① 분야별 인터페이스 발생 현황</strong></p>
+              <div class="if-matrix-wrap">
+                <table class="if-matrix">
+                  <thead>
+                    <tr>
+                      <th class="if-corner">
+                        <span class="corner-top">제공사항</span>
+                        <span class="corner-bot">반영사항</span>
+                      </th>
+                      <th>토목</th><th>건축</th><th>궤도</th><th>전차선</th><th>전력</th><th>신호</th><th>통신</th><th>차량</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th>토목</th>   <td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">하중·공간요구</span></td><td class="if-yes"><span class="if-yes-text">선형·궤도하중</span></td><td class="if-yes"><span class="if-yes-text">지주위치·기초반력</span></td><td class="if-yes"><span class="if-yes-text">관로·접지망</span></td><td class="if-yes"><span class="if-yes-text">장비기초·관로</span></td><td class="if-yes"><span class="if-yes-text">통신관로·풀박스</span></td><td class="if-yes"><span class="if-yes-text">차량한계·최대구배</span></td></tr>
+                    <tr><th>건축</th>   <td class="if-yes"><span class="if-yes-text">구조레벨·방수경계</span></td><td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">승강장·기준선</span></td><td class="if-yes"><span class="if-yes-text">절연거리·점검공간</span></td><td class="if-yes"><span class="if-yes-text">전기실·부하</span></td><td class="if-yes"><span class="if-yes-text">신호기기실</span></td><td class="if-yes"><span class="if-yes-text">통신실·CCTV위치</span></td><td class="if-yes"><span class="if-yes-text">출입문·PSD</span></td></tr>
+                    <tr><th>궤도</th>   <td class="if-yes"><span class="if-yes-text">노반·침하·배수</span></td><td class="if-yes"><span class="if-yes-text">플랫폼 마감선</span></td><td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">전차선 높이·편위</span></td><td class="if-yes"><span class="if-yes-text">귀선전류·분담</span></td><td class="if-yes"><span class="if-yes-text">궤도회로·분기기</span></td><td class="if-yes"><span class="if-yes-text">선로변 케이블 이격</span></td><td class="if-yes"><span class="if-yes-text">축중·차량형상</span></td></tr>
+                    <tr><th>전차선</th> <td class="if-yes"><span class="if-yes-text">터널단면·지주기초</span></td><td class="if-yes"><span class="if-yes-text">천장고·절연거리</span></td><td class="if-yes"><span class="if-yes-text">레일고·궤도선형</span></td><td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">급전구간·보호협조</span></td><td class="if-yes"><span class="if-yes-text">EMI·절연구간</span></td><td class="if-yes"><span class="if-yes-text">EMC·케이블이격</span></td><td class="if-yes"><span class="if-yes-text">팬터그래프·전력수요</span></td></tr>
+                    <tr><th>전력</th>   <td class="if-yes"><span class="if-yes-text">변전소부지·덕트</span></td><td class="if-yes"><span class="if-yes-text">부하파·전기실</span></td><td class="if-yes"><span class="if-yes-text">귀선전류·절연</span></td><td class="if-yes"><span class="if-yes-text">견인부하·급전구간</span></td><td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">신호전원·UPS</span></td><td class="if-yes"><span class="if-yes-text">통신전원·UPS</span></td><td class="if-yes"><span class="if-yes-text">피크부하·회생전력</span></td></tr>
+                    <tr><th>신호</th>   <td class="if-yes"><span class="if-yes-text">장비위치·관로</span></td><td class="if-yes"><span class="if-yes-text">관제실·기기실</span></td><td class="if-yes"><span class="if-yes-text">궤도회로·분기기</span></td><td class="if-yes"><span class="if-yes-text">급전구간·EMI</span></td><td class="if-yes"><span class="if-yes-text">전원공급·접지기준</span></td><td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">데이터망·시간동기</span></td><td class="if-yes"><span class="if-yes-text">ATP/ATO·제동곡선</span></td></tr>
+                    <tr><th>통신</th>   <td class="if-yes"><span class="if-yes-text">관로·맨홀</span></td><td class="if-yes"><span class="if-yes-text">통신실·PIS/CCTV</span></td><td class="if-yes"><span class="if-yes-text">선로변 설치공간</span></td><td class="if-yes"><span class="if-yes-text">EMC·이격거리</span></td><td class="if-yes"><span class="if-yes-text">통신전원·UPS</span></td><td class="if-yes"><span class="if-yes-text">프로토콜·지연시간</span></td><td class="if-diag"></td><td class="if-yes"><span class="if-yes-text">TCMS·차상무선</span></td></tr>
+                    <tr><th>차량</th>   <td class="if-yes"><span class="if-yes-text">건축한계·곡선반경</span></td><td class="if-yes"><span class="if-yes-text">승강장간격·PSD</span></td><td class="if-yes"><span class="if-yes-text">궤간·레일형식</span></td><td class="if-yes"><span class="if-yes-text">전압·접촉조건</span></td><td class="if-yes"><span class="if-yes-text">전압범위·전력용량</span></td><td class="if-yes"><span class="if-yes-text">ATP/ATO·제동성능</span></td><td class="if-yes"><span class="if-yes-text">무선통신·속도정보</span></td><td class="if-diag"></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="desc-text" style="margin-top: 18px;"><strong>② 수행단계별 인터페이스 관리 요구사항 (IRM & ICD)</strong></p>
+              
+              <div class="icd-flow-container" style="padding: 20px 0; margin-top: 10px;">
+                <!-- Phase 1 -->
+                <div class="icd-phase" style="padding: 0 8px;">
+                  <div class="timeline-node" style="width: 55px; height: 55px; font-size: 1.4rem; margin-bottom: 15px; border-width: 3px;">1</div>
+                  <div class="icd-phase-header" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 6px;">IRM 구축 및 책임 할당</h4>
+                    <span class="phase-sub" style="font-size: 1rem; padding: 3px 10px;">기획 / 기본설계</span>
+                  </div>
+                  <div class="icd-phase-body" style="padding: 14px 12px;">
+                    <ul>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">공종 간 책임 한계(Battery Limit) 최초 식별</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">물리·논리적 인터페이스 분류</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 0;">Provider / Receiver 확정</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="icd-phase" style="padding: 0 8px;">
+                  <div class="timeline-node" style="width: 55px; height: 55px; font-size: 1.4rem; margin-bottom: 15px; border-width: 3px;">2</div>
+                  <div class="icd-phase-header" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 6px;">설계 ICD 작성 및 확정</h4>
+                    <span class="phase-sub" style="font-size: 1rem; padding: 3px 10px;">실시설계 단계</span>
+                  </div>
+                  <div class="icd-phase-body" style="padding: 14px 12px;">
+                    <ul>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">공간·데이터 등 구체적 파라미터화</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">타 공종 설계 교차 검증 (Cross-check)</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 0;">상호 서명(Sign-off) 구속력 확보</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="icd-phase" style="padding: 0 8px;">
+                  <div class="timeline-node" style="width: 55px; height: 55px; font-size: 1.4rem; margin-bottom: 15px; border-width: 3px;">3</div>
+                  <div class="icd-phase-header" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 6px;">시공 ICD 및 Handover</h4>
+                    <span class="phase-sub" style="font-size: 1rem; padding: 3px 10px;">시공 / 제작 단계</span>
+                  </div>
+                  <div class="icd-phase-body" style="padding: 14px 12px;">
+                    <ul>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">선행 As-built 실측 데이터 동기화</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">시공 간섭(Clash) 해결 및 업데이트</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 0;">Handover 허용 오차(Tolerance) 합의</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="icd-phase" style="padding: 0 8px;">
+                  <div class="timeline-node" style="width: 55px; height: 55px; font-size: 1.4rem; margin-bottom: 15px; border-width: 3px;">4</div>
+                  <div class="icd-phase-header" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 6px;">통합 인터페이스 검증</h4>
+                    <span class="phase-sub" style="font-size: 1rem; padding: 3px 10px;">시운전 / IST 단계</span>
+                  </div>
+                  <div class="icd-phase-body" style="padding: 14px 12px;">
+                    <ul>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">ICD 파라미터 요구사항 현장 테스트</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 8px;">비정상 조건 연동 성능 확인</li>
+                      <li style="font-size: 1.1rem; margin-bottom: 0;">운영사 최종 승인 및 문서화</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. 결론 (Conclusion) -->
+      <section class="poster-row conclusion-row">
+        <div class="row-header">
+          <h2>Conclusion / Future Study</h2>
+        </div>
+        <div class="row-content box-content">
+          <ul class="styled-list">
+            <li>본 연구는 <strong>대한민국 철도산업이 해외 EPC 메가프로젝트 시장에서 글로벌 경쟁력을 확보하고 성공적으로 사업을 완수하기 위한 핵심 초석</strong>임.</li>
+            <li>ICD·IRM 기반의 표준화된 인터페이스 관리 거버넌스를 통해, 복잡한 해외 다수 계약자 환경에서도 <strong>물리적·논리적 충돌을 예방하고 공기 지연 리스크를 최소화</strong>할 수 있음.</li>
+            <li><strong>향후 과제:</strong> 디지털 트윈(Digital Twin) 기술과 접목한 자동화된 인터페이스 충돌 감지 및 리스크 예측 시스템 개발 연구 필요.</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- 작업용 빈 캔버스 (스크래치패드) -->
+  <div class="poster-canvas" style="background-color: #F8FAFC; padding: 20mm; margin-top: 40px; min-height: 400px; border: 1px dashed #CBD5E1;">
+    <h2 style="color: #1B2B48; text-align: center; font-size: 2rem; margin-bottom: 40px; font-weight: 700;">
+      Conclusion & Future Study (디자인 시안)
+    </h2>
+    <div class="scratchpad-content" style="padding: 10px;">
+      
+      <div class="conclusion-cards" style="display: flex; gap: 30px; justify-content: space-between;">
+        
+        <!-- Card 1: 연구 의의 -->
+        <div style="flex: 1; background: #ffffff; border: 1px solid #E2E8F0; border-top: 6px solid #1B2B48; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -10px; right: 10px; color: #1B2B48; font-size: 5rem; font-weight: 900; opacity: 0.05; letter-spacing: -2px;">01</div>
+          <h3 style="color: #1B2B48; font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px;">연구의 의의 (Significance)</h3>
+          <p style="font-size: 1.1rem; line-height: 1.65; color: #334155; margin: 0;">
+            대한민국 철도산업이 <strong>해외 EPC 메가프로젝트</strong> 시장에서 글로벌 수주 경쟁력을 확보하고, 다수 계약자 간의 복잡한 턴키(Turn-key) 사업을 성공적으로 완수하기 위한 핵심 관리 초석을 제공합니다.
+          </p>
+        </div>
+
+        <!-- Card 2: 기대 효과 -->
+        <div style="flex: 1; background: #ffffff; border: 1px solid #E2E8F0; border-top: 6px solid #0369A1; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -10px; right: 10px; color: #0369A1; font-size: 5rem; font-weight: 900; opacity: 0.05; letter-spacing: -2px;">02</div>
+          <h3 style="color: #0369A1; font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px;">기대 효과 (Impact)</h3>
+          <p style="font-size: 1.1rem; line-height: 1.65; color: #334155; margin: 0;">
+            단편적인 관리를 넘어 <strong>ICD·IRM 기반의 표준화된 거버넌스</strong>를 확립함으로써, 시공/시스템 간의 물리적·논리적 충돌을 선제적으로 예방하고 설계 변경 및 공기 지연 리스크를 최소화합니다.
+          </p>
+        </div>
+
+        <!-- Card 3: 향후 과제 -->
+        <div style="flex: 1; background: #ffffff; border: 1px solid #E2E8F0; border-top: 6px solid #0F766E; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -10px; right: 10px; color: #0F766E; font-size: 5rem; font-weight: 900; opacity: 0.05; letter-spacing: -2px;">03</div>
+          <h3 style="color: #0F766E; font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px;">향후 과제 (Future Study)</h3>
+          <p style="font-size: 1.1rem; line-height: 1.65; color: #334155; margin: 0;">
+            향후 <strong>디지털 트윈(Digital Twin) 및 BIM 4D/5D 기술</strong>과 접목하여, 도면 변경 시 실시간으로 인터페이스 충돌을 자동 감지하고 비용 리스크를 예측하는 AI 기반 자동화 시스템 개발이 요구됩니다.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 건축한계 인터페이스 다이어그램 캔버스 -->
+  <div class="poster-canvas" style="background-color: #F1F5F9; padding: 20mm; margin-top: 40px; min-height: 400px; border: 1px dashed #94A3B8;">
+    <h2 style="color: #1B2B48; text-align: center; font-size: 2rem; margin-bottom: 40px; font-weight: 700;">
+      [ICD 실무 적용 예시] 건축한계(Structure Gauge) 설정 인터페이스 도식화
+    </h2>
+    
+    <div class="user-provided-diagram" style="max-width: 1100px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 4px; border: 2px solid #000; box-sizing: border-box; font-family: 'Pretendard', 'Malgun Gothic', sans-serif;">
+      
+      <!-- Title Section -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="font-size: 2.2rem; font-weight: 900; color: #0B1E36; margin-bottom: 10px; letter-spacing: -1px;">건축한계 설정을 위한 기술적 인터페이스 도식</h2>
+        <p style="font-size: 1.1rem; color: #333; font-weight: 600;">차량한계, 시공오차, 시스템 설치조건, 운영·유지보수 요구 및 RAMS 기준을 통합하여 최종 건축한계를 확정</p>
+      </div>
+
+      <!-- Main Grid Layout -->
+      <div style="display: flex; gap: 25px; position: relative; margin-bottom: 30px; align-items: stretch;">
+        
+        <!-- Column 1 -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between; flex: 1.1;">
+          
+          <!-- Box 1 Wrapper -->
+          <div style="position: relative;">
+            <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff;">
+              <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 12px; font-size: 1.2rem; font-weight: 700;">1. 차량제작사</div>
+              <div style="padding: 15px;">
+                <ul style="list-style-type: disc; margin: 0; padding-left: 20px; font-size: 0.95rem; color: #000; line-height: 1.8;">
+                  <li>정적 차량한계 제공</li>
+                  <li>동적 차량한계 제공</li>
+                  <li>차량 외형 및 주행조건 제공</li>
+                </ul>
+              </div>
+              <div style="background: #E8F0FA; text-align: center; padding: 8px; font-weight: 700; color: #0B1E36; border-top: 1px solid #0B1E36; margin-top: 10px;">차량 입력</div>
+            </div>
+            <!-- Arrow right -->
+            <div style="position: absolute; right: -22px; top: 40%; color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0; z-index: 10;">→</div>
+          </div>
+
+          <!-- Gap -->
+          <div style="height: 30px;"></div>
+
+          <!-- Box 3 Wrapper -->
+          <div style="position: relative;">
+            <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff;">
+              <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 10px 5px; font-weight: 700;">
+                <div style="font-size: 1.2rem;">3. 기타 시스템사</div>
+                <div style="font-size: 0.8rem; font-weight: 400; margin-top: 4px;">(신호·통신·전력·전차선·PSD 등)</div>
+              </div>
+              <div style="padding: 15px;">
+                <ul style="list-style-type: disc; margin: 0; padding-left: 20px; font-size: 0.95rem; color: #000; line-height: 1.8;">
+                  <li>선로변 설비 위치 제공</li>
+                  <li>설치공간 및 안전여유공간 정보 제공</li>
+                  <li>건축한계 비침범 조건 제공</li>
+                </ul>
+              </div>
+              <div style="background: #E8F0FA; text-align: center; padding: 8px; font-weight: 700; color: #0B1E36; border-top: 1px solid #0B1E36; margin-top: 5px;">시스템 요구</div>
+            </div>
+            <!-- Missing arrow from Box 3 to Box 5 -->
+            <div style="position: absolute; right: -22px; top: 40%; color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0; z-index: 10;">→</div>
+          </div>
+
+        </div>
+
+        <!-- Column 2 -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between; flex: 1.1;">
+          
+          <!-- Box 2 Wrapper -->
+          <div style="position: relative;">
+            <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff;">
+              <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 12px; font-size: 1.2rem; font-weight: 700;">2. 토목 / 궤도 분야</div>
+              <div style="padding: 15px;">
+                <ul style="list-style-type: disc; margin: 0; padding-left: 20px; font-size: 0.95rem; color: #000; line-height: 1.8;">
+                  <li>동적 차량한계 검토</li>
+                  <li>궤도·구조물 시공오차 반영</li>
+                  <li>건축한계 확보 조건 검토</li>
+                </ul>
+              </div>
+              <div style="background: #E8F0FA; text-align: center; padding: 8px; font-weight: 700; color: #0B1E36; border-top: 1px solid #0B1E36; margin-top: 10px;">토목·궤도 검토</div>
+            </div>
+            <!-- Arrow right -->
+            <div style="position: absolute; right: -22px; top: 40%; color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0; z-index: 10;">→</div>
+          </div>
+
+          <!-- Arrow UP from Box 4 to Box 2 -->
+          <div style="text-align: center; height: 30px; position: relative;">
+            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0;">↑</div>
+          </div>
+
+          <!-- Box 4 Wrapper -->
+          <div style="position: relative;">
+            <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff;">
+              <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 12px; font-size: 1.2rem; font-weight: 700;">4. 운영사 / 유지보수</div>
+              <div style="padding: 15px;">
+                <ul style="list-style-type: disc; margin: 0; padding-left: 20px; font-size: 0.95rem; color: #000; line-height: 1.8;">
+                  <li>점검통로 및 접근공간 요구</li>
+                  <li>비상대피·작업자 안전공간 요구</li>
+                  <li>운영·유지보수 요구사항 제공</li>
+                </ul>
+              </div>
+              <div style="background: #E8F0FA; text-align: center; padding: 8px; font-weight: 700; color: #0B1E36; border-top: 1px solid #0B1E36; margin-top: 10px;">운영 요구</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 3 (Main Contractor - Tall Box) -->
+        <div style="display: flex; flex: 1.5; align-items: stretch; position: relative;">
+          
+          <div style="position: relative; width: 100%; display: flex;">
+            <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column; width: 100%;">
+              <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 15px; font-size: 1.3rem; font-weight: 700;">5. 메인 컨트랙터</div>
+              <div style="padding: 30px 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                <ul style="list-style-type: disc; margin: 0 0 30px 0; padding-left: 20px; font-size: 1rem; color: #000; line-height: 2.2; font-weight: 600;">
+                  <li>차량·토목·시스템·운영 요구 통합</li>
+                  <li>분야 간 충돌·누락 검토 및 조정</li>
+                  <li>RAMS 요구사항 검토</li>
+                  <li>최종 건축한계안 확정 관리</li>
+                </ul>
+                
+                <!-- RAMS Box -->
+                <div style="background: #F1F5F9; border: 1px solid #94A3B8; border-radius: 4px; padding: 12px; text-align: center; margin-top: auto;">
+                  <span style="color: #0B1E36; font-weight: 700; font-size: 0.95rem;">RAMS = Reliability · Availability · Maintainability · Safety</span>
+                </div>
+              </div>
+            </div>
+            <!-- Arrow right -->
+            <div style="position: absolute; right: -22px; top: 40%; color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0; z-index: 10;">→</div>
+          </div>
+
+        </div>
+
+        <!-- Column 4 (Output Box) -->
+        <div style="display: flex; flex: 0.9; align-items: center;">
+          <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff; width: 100%;">
+            <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 12px; font-size: 1.2rem; font-weight: 700;">6. 최종 산출물</div>
+            <div style="padding: 20px 15px;">
+              <ul style="list-style-type: disc; margin: 0; padding-left: 20px; font-size: 0.95rem; color: #000; line-height: 2.2;">
+                <li>Final Structure Gauge</li>
+                <li>최종 건축한계</li>
+                <li>분야별 설계 반영</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Banner -->
+      <div style="position: relative; margin-top: 15px;">
+        <!-- Arrows pointing up to Box 5 -->
+        <div style="position: absolute; left: 55%; top: -15px; color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0; z-index: 10;">↑</div>
+        <div style="position: absolute; left: 68%; top: -15px; color: #0B1E36; font-size: 2.2rem; font-weight: 900; line-height: 0; z-index: 10;">↑</div>
+        
+        <div style="background: #F1F5F9; border: 2px solid #0B1E36; border-radius: 6px; padding: 15px; text-align: center;">
+          <span style="font-size: 1.2rem; font-weight: 800; color: #0B1E36;">
+            핵심 인터페이스 = 차량한계 + 시공오차 + 설비 설치정보 + 운영·유지보수 요구 + RAMS 기준 <span style="margin: 0 10px;">→</span> 최종 건축한계
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
