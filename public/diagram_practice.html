@@ -31,36 +31,36 @@
 
             <div class="intro-block">
               <p class="intro-title">1. 연구 배경 (Background)</p>
-              <ul class="small-list" style="list-style: none; padding-left: 5px; margin-top: 10px;">
-                <li style="margin-bottom: 10px;">① 해외 철도 시장, EPC Turnkey 발주 급증 추세</li>
-                <li style="margin-bottom: 10px;">② 발주 구조: 단일 책임(Single Responsibility) 구조<br>
-                  <span style="display:inline-block; margin-top: 4px; padding-left: 24px;">→ 통합 역량 요구 증가</span>
-                </li>
-                <li style="margin-bottom: 10px;">③ 국내기업의 철도 시스템 통합(SI) 역량 강화 필요</li>
+              <ul class="styled-list small-list">
+                <li>해외 철도 시장, EPC Turnkey 발주 급증 추세</li>
+                <li>발주 구조: 단일 책임(Single Responsibility) 구조 → 통합 역량 요구 증가</li>
+                <li>국내기업의 철도 시스템 통합(SI) 역량 강화 필요</li>
               </ul>
             </div>
 
             <div class="intro-block">
               <p class="intro-title problem">2. 문제 제기 (Problem Statement)</p>
-              <ul class="small-list" style="list-style: none; padding-left: 5px; margin-top: 10px;">
-                <li style="margin-bottom: 10px;">
-                  <span class="highlight-red">① 풀패키지 환경</span><br>
-                  <span style="display:inline-block; margin-top: 4px; padding-left: 24px;">→ 다공종 인터페이스 복잡도 기하급수적 증가</span>
+              <ul class="styled-list small-list">
+                <li><span class="highlight-red">풀패키지 환경</span>
+                  <ul class="styled-list small-list" style="margin-top:4px;">
+                    <li><span class="arrow-indent">→</span> 다공종 인터페이스 복잡도 기하급수적 증가</li>
+                  </ul>
                 </li>
-                <li style="margin-bottom: 10px;">
-                  <span class="highlight-red">② 공종별 경계 미관리 시</span><br>
-                  <span style="display:inline-block; margin-top: 4px; padding-left: 24px;"><span class="highlight-red">→ 설계 / 시공 충돌 및 공기 지연 위험 심화</span></span>
+                <li><span class="highlight-red">공종별 경계 미관리 시</span>
+                  <ul class="styled-list small-list" style="margin-top:4px;">
+                    <li><span class="arrow-indent">→</span> <span class="highlight-red">설계/시공 충돌 및 공기 지연 위험 심화</span></li>
+                  </ul>
                 </li>
               </ul>
             </div>
 
             <div class="intro-block">
               <p class="intro-title objective">3. 연구 목적 (Objective)</p>
-              <ul class="small-list" style="list-style: none; padding-left: 5px; margin-top: 10px;">
-                <li style="margin-bottom: 10px;">① 전문화된 인터페이스 관리 체계의 필요성 대두</li>
-                <li style="margin-bottom: 10px;">② 수행 사례 성과 분석 → Lessons Learned 도출</li>
-                <li style="margin-bottom: 10px;">③ ICD-IRM 인터페이스 관리 거버넌스 모델 정립</li>
-                <li style="margin-bottom: 10px;">④ 철도산업 해외 EPC 진출 → 실무 방향성 제시</li>
+              <ul class="styled-list small-list">
+                <li>전문화된 인터페이스 관리 체계의 필요성 대두</li>
+                <li>수행 사례 성과 분석 → Lessons Learned 도출</li>
+                <li>ICD-IRM 인터페이스 관리 거버넌스 모델 정립</li>
+                <li>철도산업 해외 EPC 진출 → 실무 방향성 제시</li>
               </ul>
             </div>
 
@@ -263,9 +263,9 @@
               <p class="desc-text" style="margin-top: 8px;"><strong>③ 건축한계 설정을 위한 기술적 인터페이스 도식</strong></p>
               
               <!-- Diagram Box -->
-              <div class="industrial-diagram" style="margin-top: 15px; flex-grow: 1; padding: 15px; background: #ffffff; display: flex; flex-direction: column; justify-content: flex-start; gap: 4px; font-family: 'Pretendard', sans-serif;">
+              <div class="industrial-diagram" style="margin-top: 15px; flex-grow: 1; border: 1px dashed #94A3B8; padding: 15px; background: #ffffff; display: flex; flex-direction: column; justify-content: flex-start; gap: 4px; font-family: 'Pretendard', sans-serif;">
                 
-                <div style="display: flex; justify-content: space-between; gap: 8%; position: relative; z-index: 2;">
+                <div style="display: flex; justify-content: space-between; gap: 8%;">
                   <!-- Box 1 -->
                   <div style="width: 46%; border: 2px solid #1C3557; border-radius: 6px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column;">
                     <div style="background: #1C3557; color: #ffffff; text-align: center; padding: 8px 5px; font-weight: 700;">
@@ -279,7 +279,7 @@
                         <li>차량 외형 및 주행조건 제공</li>
                       </ul>
                     </div>
-                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;">차량 입력</div>
+                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;"><span style="color: #E11D48; font-size: 0.8rem; margin-right: 4px;">[Input]</span> 차량 입력 <span style="color: #E11D48; font-size: 0.8rem; margin-left: 4px;">(IRM)</span></div>
                   </div>
                   <!-- Box 3 -->
                   <div style="width: 46%; border: 2px solid #1C3557; border-radius: 6px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column;">
@@ -294,43 +294,32 @@
                         <li>건축한계 비침범 조건 제공</li>
                       </ul>
                     </div>
-                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;">시스템 요구</div>
+                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;"><span style="color: #E11D48; font-size: 0.8rem; margin-right: 4px;">[Input]</span> 시스템 요구 <span style="color: #E11D48; font-size: 0.8rem; margin-left: 4px;">(IRM)</span></div>
                   </div>
                 </div>
                 
-                <div style="display: flex; justify-content: space-around; font-size: 1.5rem; font-weight: 900; color: #0B1E36; line-height: 0.5; padding: 5px 0; position: relative; z-index: 2;">
+                <div style="display: flex; justify-content: space-around; font-size: 1.5rem; font-weight: 900; color: #0B1E36; line-height: 0.5; padding: 5px 0;">
                   <div>⤡</div><div>⤢</div>
                 </div>
                 
                 <!-- Box 5 moved up -->
-                <div style="position: relative; align-self: center; display: flex; justify-content: center; align-items: center;">
-                  <!-- Yellow Integration Donut -->
-                  <div style="position: absolute; width: 430px; height: 430px; border-radius: 50%; border: 35px solid #FEF08A; background: transparent; opacity: 0.6; z-index: 0; pointer-events: none;"></div>
-                  
-                  <!-- Left Side Text -->
-                  <div style="position: absolute; left: 50%; top: 50%; transform: translate(-330px, -50%); text-align: center; font-weight: 800; font-size: 1.05rem; line-height: 1.4; color: #0055FF; z-index: 3; white-space: nowrap;">
-                    분야별<br>인터페이스<br>요구사항 식별
-                  </div>
-
-                  <div style="position: relative; border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff; width: max-content; z-index: 2;">
-                    <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 10px; font-weight: 700; font-size: 1.05rem;">5. Main Contractor</div>
-                    <div style="padding: 15px 20px;">
-                      <ul style="list-style-type: disc; margin: 0; padding-left: 18px; font-size: 0.95rem; color: #000; line-height: 1.6; word-break: keep-all; font-weight: 600;">
-                        <li>차량·토목·시스템·운영 요구 통합</li>
-                        <li>분야 간 충돌·누락 검토 및 조정</li>
-                        <li>RAMS 요구사항 검토</li>
-                        <li>최종 건축한계안 확정 관리</li>
-                      </ul>
-                    </div>
-                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 800; color: #0055FF; border-top: 1px solid #0055FF; font-size: 1.05rem;">인터페이스 통합 / 조정 / 관리</div>
+                <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff; align-self: center; width: max-content;">
+                  <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 10px; font-weight: 700; font-size: 1.05rem;"><span style="color: #34D399; font-size: 0.85rem; margin-right: 5px;">[Process]</span>5. Main Contractor<span style="color: #34D399; font-size: 0.85rem; margin-left: 5px;">(ICD Control)</span></div>
+                  <div style="padding: 15px 20px;">
+                    <ul style="list-style-type: disc; margin: 0; padding-left: 18px; font-size: 0.95rem; color: #000; line-height: 1.6; word-break: keep-all; font-weight: 600;">
+                      <li>차량·토목·시스템·운영 요구 통합</li>
+                      <li>분야 간 충돌·누락 검토 및 조정</li>
+                      <li>RAMS 요구사항 검토</li>
+                      <li>최종 건축한계안 확정 관리</li>
+                    </ul>
                   </div>
                 </div>
                 
-                <div style="display: flex; justify-content: space-around; font-size: 1.5rem; font-weight: 900; color: #0B1E36; line-height: 0.5; padding: 5px 0; position: relative; z-index: 2;">
+                <div style="display: flex; justify-content: space-around; font-size: 1.5rem; font-weight: 900; color: #0B1E36; line-height: 0.5; padding: 5px 0;">
                   <div>⤢</div><div>⤡</div>
                 </div>
 
-                <div style="display: flex; justify-content: space-between; gap: 8%; position: relative; z-index: 2;">
+                <div style="display: flex; justify-content: space-between; gap: 8%;">
                   <!-- Box 2 moved down -->
                   <div style="width: 46%; border: 2px solid #1C3557; border-radius: 6px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column;">
                     <div style="background: #1C3557; color: #ffffff; text-align: center; padding: 10px; font-weight: 700; font-size: 1.05rem;">2. 토목/궤도 분야</div>
@@ -341,7 +330,7 @@
                         <li>건축한계 확보 조건 검토</li>
                       </ul>
                     </div>
-                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;">토목·궤도 검토</div>
+                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;"><span style="color: #E11D48; font-size: 0.8rem; margin-right: 4px;">[Input]</span> 토목·궤도 검토 <span style="color: #E11D48; font-size: 0.8rem; margin-left: 4px;">(IRM)</span></div>
                   </div>
                   <!-- Box 4 moved down -->
                   <div style="width: 46%; border: 2px solid #1C3557; border-radius: 6px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column;">
@@ -353,37 +342,31 @@
                         <li>운영·유지보수 요구사항 제공</li>
                       </ul>
                     </div>
-                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;">운영 요구</div>
+                    <div style="background: #E8F0FA; text-align: center; padding: 6px; font-weight: 700; color: #1C3557; border-top: 1px solid #1C3557; font-size: 0.95rem;"><span style="color: #E11D48; font-size: 0.8rem; margin-right: 4px;">[Input]</span> 운영 요구 <span style="color: #E11D48; font-size: 0.8rem; margin-left: 4px;">(IRM)</span></div>
                   </div>
                 </div>
 
 
-                <div style="text-align: center; margin-top: -85px; margin-bottom: 5px; position: relative; z-index: 2; display: flex; justify-content: center; align-items: center;">
-                  <svg width="24" height="130" viewBox="0 0 24 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 0V126M12 126L2 114M12 126L22 114" stroke="#0055FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <div style="position: absolute; left: 50%; bottom: 5px; transform: translateX(25px); text-align: left; font-weight: 800; font-size: 1.05rem; line-height: 1.4; color: #0055FF; white-space: nowrap;">
-                    통합 인터페이스 확정 / 승인
-                  </div>
-                </div>
+                <div style="text-align: center; font-size: 1.8rem; font-weight: 900; color: #0B1E36; line-height: 0.5; padding: 5px 0;">↓</div>
 
-                <!-- Box 6 (Merged) -->
-                <div style="border: 2px solid #0055FF; border-radius: 6px; overflow: hidden; background: #ffffff;">
-                  <div style="background: #0055FF; color: #ffffff; text-align: center; padding: 10px; font-weight: 700; font-size: 1.1rem;">6. 최종 산출물</div>
+                <!-- Box 6 -->
+                <div style="border: 2px solid #0B1E36; border-radius: 6px; overflow: hidden; background: #ffffff;">
+                  <div style="background: #0B1E36; color: #ffffff; text-align: center; padding: 10px; font-weight: 700; font-size: 1.1rem;"><span style="color: #60A5FA; font-size: 0.9rem; margin-right: 5px;">[Output]</span>6. 최종 산출물</div>
                   <div style="padding: 15px 20px;">
-                    <ul style="display: flex; justify-content: space-evenly; align-items: center; margin: 0; padding: 0; font-size: 1rem; color: #000; font-weight: 700; list-style-type: none;">
-                      <li><span style="color: #000; font-size: 0.45em; vertical-align: middle; margin-right: 6px; display: inline-block; transform: translateY(-2px);">●</span>Final Structure Gauge</li>
-                      <li><span style="color: #000; font-size: 0.45em; vertical-align: middle; margin-right: 6px; display: inline-block; transform: translateY(-2px);">●</span>최종 건축한계</li>
-                      <li><span style="color: #000; font-size: 0.45em; vertical-align: middle; margin-right: 6px; display: inline-block; transform: translateY(-2px);">●</span>분야별 설계 반영</li>
+                    <ul style="list-style-type: disc; margin: 0; padding-left: 18px; font-size: 0.95rem; color: #000; line-height: 1.6; word-break: keep-all; font-weight: 600;">
+                      <li>Final Structure Gauge</li>
+                      <li>최종 건축한계</li>
+                      <li>분야별 설계 반영</li>
                     </ul>
                   </div>
-                  <!-- Attached Bottom Interface Box -->
-                  <div style="background: #E8F0FA; border-top: 1px solid #0055FF; padding: 12px 15px;">
-                    <div style="color: #0B1E36; font-weight: 800; font-size: 0.95rem; text-align: left; line-height: 1.5;">
-                      <div>※ 핵심 인터페이스</div>
-                      <div style="padding-left: 15px;">: 차량한계 + 시공오차 + 설비 설치정보 + 운영·유지보수 요구 + RAMS 기준</div>
-                      <div style="padding-left: 15px;">→ 최종 건축한계</div>
-                    </div>
+                </div>
+                
+                <!-- Bottom Interface Box -->
+                <div style="background: #E8F0FA; border: 2px solid #0B1E36; border-radius: 6px; padding: 12px 15px; margin-top: auto;">
+                  <div style="color: #0B1E36; font-weight: 800; font-size: 0.95rem; text-align: left; line-height: 1.5;">
+                    <div>※ 핵심 인터페이스</div>
+                    <div style="padding-left: 15px;">: 차량한계 + 시공오차 + 설비 설치정보 + 운영·유지보수 요구 + RAMS 기준</div>
+                    <div style="padding-left: 15px;">→ 최종 건축한계</div>
                   </div>
                 </div>
               </div>
@@ -401,8 +384,8 @@
         <div class="row-content box-content">
           <div style="font-size: 1.75rem; line-height: 1.5; color: #1B2B48; font-weight: 800; padding: 15px 30px; word-break: keep-all; letter-spacing: -1.5px; display: flex; flex-direction: column; justify-content: center; gap: 18px;">
             <div style="display: flex; align-items: flex-start; white-space: nowrap;"><span style="color: #0369A1; margin-right: 12px; font-size: 1.5rem; transform: translateY(3px);">▶</span><span>해외 EPC 철도사업의 다공종 간 <strong style="color: #0369A1;">IRM(Interface Requirements Matrix)</strong>과 <strong style="color: #0369A1;">ICD(Interface Control Document)</strong> 기반의 표준화된 인터페이스 관리기준 확립</span></div>
-            <div style="display: flex; align-items: flex-start;"><span style="color: #0369A1; margin-right: 12px; font-size: 1.5rem; transform: translateY(3px);">▶</span><span>정립된 IRM, ICD 체계를 관리할 수 있는 프로젝트 전용 플랫폼 개발 연구 및 <strong>BIM</strong> 연계로 설계, 시공의 충돌 예방과 공기 지연 리스크를 최소화하는 데 그 목적이 있음</span></div>
-            <div style="display: flex; align-items: flex-start;"><span style="color: #0369A1; margin-right: 12px; font-size: 1.5rem; transform: translateY(3px);">▶</span><span>기 구축된 국내 철도사업의 법령, 기준 및 지침을 해외 시장에서도 통용될 수 있도록 국제 표준화하는 연구를 병행할 예정</span></div>
+            <div style="display: flex; align-items: flex-start;"><span style="color: #0369A1; margin-right: 12px; font-size: 1.5rem; transform: translateY(3px);">▶</span><span>이에 상응하는 프로젝트 관리 도구 개발 연구 및 <strong style="color: #0369A1;">BIM</strong> 적용으로 설계, 시공의 충돌 예방과 공기 지연 리스크를 최소화하는 데 그 목적이 있음</span></div>
+            <div style="display: flex; align-items: flex-start;"><span style="color: #0369A1; margin-right: 12px; font-size: 1.5rem; transform: translateY(3px);">▶</span><span>기 국내 철도사업 기반 구축된 법령, 기준, 지침서를 해외 철도시장에서 적용 가능한 국제기준으로 적용 가능한 국제표준화 병행 연구 예정</span></div>
           </div>
         </div>
       </section>
