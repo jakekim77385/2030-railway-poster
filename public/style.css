@@ -391,7 +391,7 @@ body {
   flex-direction: column;
   flex: 1;
   padding: 10mm var(--margin);
-  gap: 10mm;
+  gap: 8mm;
 }
 
 .poster-row {
@@ -404,7 +404,6 @@ body {
 }
 
 .subjects-row {
-  flex: 1;
   min-height: 0;
 }
 
@@ -415,7 +414,7 @@ body {
 /* Row Headers like Screenshot */
 .row-header {
   text-align: center;
-  margin-bottom: 5mm;
+  margin-bottom: 4mm;
   position: relative;
   /* Double line top and bottom */
   border-top: 3px solid var(--line-blue);
@@ -454,12 +453,12 @@ body {
 .box-content {
   background-color: var(--card-bg);
   border: 2px solid #000000; /* Black border like screenshot */
-  padding: 10mm;
+  padding: 8mm;
 }
 
 .inner-columns {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 15mm;
 }
 
@@ -661,7 +660,7 @@ body {
 .discipline-cell {
   display: table-cell;
   border: 1px solid #ccc;
-  padding: 8px 6px;
+  padding: 8px 2px;
   text-align: center;
   font-size: 1.35rem;
   vertical-align: middle;
@@ -1121,8 +1120,8 @@ body {
 .if-matrix-wrap { width: 100%; overflow-x: auto; }
 
 .if-matrix {
-  width: 100%;
-  table-layout: fixed;
+  width: auto; /* Changed from 100% to shrink to content */
+  table-layout: auto; /* Changed from fixed */
   border-collapse: collapse;
   margin-bottom: 6px;
   border: 1.5px solid #B0BEC5; /* Match top table outer border */
@@ -1157,7 +1156,7 @@ body {
 /* ─ Data cells ─ */
 .if-matrix td {
   text-align: center;
-  padding: 10px 4px;
+  padding: 10px 2px; /* Reduced horizontal padding */
   border: 1px solid #D8DCE0; /* Match top table body border */
   font-size: 1.05rem;
   vertical-align: middle;
@@ -1186,6 +1185,7 @@ body {
   background: #1C3557 !important; /* Match top table header */
   position: relative !important;
   overflow: hidden;
+  min-width: 180px; /* Prevent text squishing */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cline x1='0' y1='0' x2='100%25' y2='100%25' stroke='%23344F6E' stroke-width='2'/%3E%3C/svg%3E") !important;
   background-size: 100% 100%;
 }
@@ -1542,7 +1542,9 @@ body {
    ============================ */
 .icd-flow-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 5px; /* Reduced gap */
+  width: max-content; /* Shrink to wrap contents */
   align-items: stretch;
   background: transparent;
   padding: 40px 10px;
@@ -1562,13 +1564,13 @@ body {
 }
 
 .icd-phase {
-  flex: 1;
+  flex: 0 1 auto; /* Changed from 1 so it doesn't stretch */
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 2;
-  padding: 0 15px;
+  padding: 0 5px; /* Reduced horizontal padding */
 }
 
 /* Connectors between phases are removed in favor of continuous line */
